@@ -10,7 +10,9 @@ const checkBoolean = (req, res, next) => {
   const { is_favorite } = req.body;
   if (
     is_favorite == "true" ||
+    is_favorite == true ||
     is_favorite == "false" ||
+    is_favorite == false ||
     is_favorite == undefined
   ) {
     next();
